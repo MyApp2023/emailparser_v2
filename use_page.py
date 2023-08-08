@@ -2,12 +2,12 @@ import streamlit as st
 
 def use_page():
     # Existing code
-import streamlit as st
-import googlemaps
-import requests
-import re
-import hashlib
-import time
+    import streamlit as st
+    import googlemaps
+    import requests
+    import re
+    import hashlib
+    import time
 
 MAX_URLS = 50
 
