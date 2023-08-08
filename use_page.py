@@ -5,6 +5,7 @@ def use_page():
     MAX_URLS = 50
 
     # Counter for generating unique widget keys
+    global widget_counter
     widget_counter = 0
 
     def get_unique_key():
