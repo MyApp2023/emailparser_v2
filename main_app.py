@@ -4,11 +4,9 @@ from use_page import use_page
 from terms_of_use_page import terms_of_use_page
 
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Use", "Terms of Use"])
-
-if page == "Home":
+if st.sidebar.button("Home"):
     home_page()
-elif page == "Use":
+if st.sidebar.button("Use"):
     use_page()
-elif page == "Terms of Use":
+if st.sidebar.button("Terms of Use"):
     terms_of_use_page()
