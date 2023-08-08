@@ -5,6 +5,5 @@ def home_page():
     st.title("Welcome to My App")
     st.write("This is the home page of the application. You can navigate to other pages from here:")
 
-    if st.button("Try it now"):
-        st.session_state.page = 'use'
+    st.markdown("[Try it now](?page=use)")
 
