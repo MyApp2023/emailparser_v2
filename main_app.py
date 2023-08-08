@@ -5,7 +5,7 @@ from use_page import use_page
 from terms_of_use_page import terms_of_use_page
 
 st.sidebar.title("Navigation")
-page = st.sidebar.success("Go to", ["Home", "Use", "Terms of Use"])
+page = st.sidebar.selectbox("Go to", ["Home", "Use", "Terms of Use"])
 
 if page == "Home":
     home_page()
