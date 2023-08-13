@@ -125,6 +125,6 @@ def use_page():
             st.error("Missing API key or search engine ID. Please check the configuration.")
 
     # Reset widget keys to avoid duplicate key issue when rerunning the app
-    st.markdown("[Terms of Use](URL_TO_YOUR_TERMS_OF_USE_PAGE)")
+    st.markdown("[Terms of Use](http://findmail.co/#terms-of-use-page)")
 
     widget_counter = 0
