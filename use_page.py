@@ -95,6 +95,11 @@ def use_page():
     max_emails_key = get_unique_key()
     max_emails = st.number_input("Maximum number of emails to extract from each URL:", min_value=1, max_value=100, step=1, value=2, key=max_emails_key)
 
+        # Add a checkbox for accepting the terms of use
+    accept_terms = st.checkbox("By using this application, you are accepting the [Terms of Use](#terms-of-use-page).")
+    if not accept_terms:
+        st.warning("You must accept the Terms of Use to proceed.")
+        return  # Stop further execution if terms are not accepted
         # Search and extract e-mails button
     search_emails_button_key = get_unique_key()
     search_emails = st.button("Search and extract e-mails", key=search_emails_button_key)
