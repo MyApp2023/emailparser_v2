@@ -19,3 +19,6 @@ def home_page():
     
     if st.button("Try for Free"):
         st.session_state.page = 'use'
+
+    if st.button("Read Terms of Use"):
+        st.session_state.page = 'terms'
