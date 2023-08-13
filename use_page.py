@@ -96,7 +96,10 @@ def use_page():
     max_emails = st.number_input("Maximum number of emails to extract from each URL:", min_value=1, max_value=100, step=1, value=2, key=max_emails_key)
 
         # Add a checkbox for accepting the terms of use
-    accept_terms = st.checkbox('By using this application, you are accepting the [Terms of Use](http://findmail.co/#terms-of-use-page).', unsafe_allow_html=True)
+    st.markdown("By using this application, you are accepting the [Terms of Use](http://findmail.co/#terms-of-use-page).")
+
+    # Add a checkbox for accepting the terms of use
+    accept_terms = st.checkbox('I accept the Terms of Use.')
     if not accept_terms:
         st.warning("You must accept the Terms of Use to proceed.")
         return  # Stop further execution if terms are not accepted
@@ -125,6 +128,5 @@ def use_page():
             st.error("Missing API key or search engine ID. Please check the configuration.")
 
     # Reset widget keys to avoid duplicate key issue when rerunning the app
-    st.markdown("[Terms of Use](http://findmail.co/#terms-of-use-page)")
 
     widget_counter = 0
