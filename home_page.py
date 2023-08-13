@@ -4,9 +4,6 @@ def home_page():
     st.title("Welcome to FindMail")
     
     st.write(
-        "How many times have you tried to email multiple people with the same request "
-        "to get the best reply, opinion, or proposition? If you only message one employee, "
-        "customer, lawyer, electrician, contractor, or investor, you're missing out. One shot \n\n"
         
         "Find the best fit for your task or simply pose a question to multiple people and "
         "compare their answers or quotes with our tool.\n\n"
