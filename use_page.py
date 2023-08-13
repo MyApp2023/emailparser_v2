@@ -1,6 +1,15 @@
 import streamlit as st
 
 def use_page():
+    # Check and initialize session state
+    if 'page' not in st.session_state:
+        st.session_state.page = 'main'
+    
+    # Check if we should display the terms of use page
+    if st.session_state.page == 'terms':
+        terms_of_use_page()
+        return  # Stop further execution if on terms page
+
     # Constants
     MAX_URLS = 50
 
@@ -88,22 +97,24 @@ def use_page():
         "Select to use Google Businesses or Google Search:",
         ('Google Businesses', 'Google Search'),
         key=api_choice_key
-        )
+    )
     num_results_key = get_unique_key()
     num_results = st.number_input("How many URLs do you want to get?", min_value=1, max_value=MAX_URLS, step=1, value=1, key=num_results_key)
 
     max_emails_key = get_unique_key()
     max_emails = st.number_input("Maximum number of emails to extract from each URL:", min_value=1, max_value=100, step=1, value=2, key=max_emails_key)
 
-        # Add a checkbox for accepting the terms of use
-    st.markdown("By using this application, you are accepting the [Terms of Use](http://findmail.co/#terms-of-use-page).")
+    # Replace the markdown link with a button
+    if st.button('Terms of Use'):
+        st.session_state.page = 'terms'
 
     # Add a checkbox for accepting the terms of use
     accept_terms = st.checkbox('I accept the Terms of Use.')
     if not accept_terms:
         st.warning("You must accept the Terms of Use to proceed.")
         return  # Stop further execution if terms are not accepted
-        # Search and extract e-mails button
+    
+    # Search and extract e-mails button
     search_emails_button_key = get_unique_key()
     search_emails = st.button("Search and extract e-mails", key=search_emails_button_key)
 
@@ -128,5 +139,4 @@ def use_page():
             st.error("Missing API key or search engine ID. Please check the configuration.")
 
     # Reset widget keys to avoid duplicate key issue when rerunning the app
-
     widget_counter = 0
