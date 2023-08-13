@@ -10,16 +10,12 @@ def home_page():
         
         "Find the best fit for your task or simply pose a question to multiple people and "
         "compare their answers or quotes with our tool.\n\n"
-        
-        "To contact someone, you need an email. But how long does it take you to find an email "
-        "on a website? Probably a minute or two. And for several websites? Roughly 5 minutes. "
-        "But what if you need to search through 5, 10, 20, 30, or 50 websites? We'll handle the "
+
+        "We'll handle the "
         "manual process for you: searching for websites, keeping track of which ones you've visited, "
-        "and sifting through pages to find contact information.\n\n"
-        
-        "Our bot will assist you in searching either general Google results or the business section "
+        "and sifting through pages to find contact information using either general Google results or the Location-based Business Section "
         "through any reasonable number of websites to retrieve emails instantly. Just type in a search "
-        "query, specify the number of websites, review them, and obtain emails.\n\n"
+        "query, specify number of websites and e-mails to be extracted from a website and press search button \n\n"
         
         "Save your time; let the code handle the manual work for you!"
     )
