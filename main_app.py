@@ -7,10 +7,10 @@ from terms_of_use_page import terms_of_use_page
 if 'page' not in st.session_state:
     st.session_state.page = 'home'
 
-st.sidebar.title("Navigation")
+st.sidebar.title("Pages")
 if st.sidebar.button("Home"):
     st.session_state.page = 'home'
-if st.sidebar.button("Use"):
+if st.sidebar.button("Start"):
     st.session_state.page = 'use'
 if st.sidebar.button("Terms of Use"):
     st.session_state.page = 'terms'
