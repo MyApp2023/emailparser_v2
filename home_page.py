@@ -6,8 +6,7 @@ def home_page():
     st.write(
         "How many times have you tried to email multiple people with the same request "
         "to get the best reply, opinion, or proposition? If you only message one employee, "
-        "customer, lawyer, electrician, contractor, or investor, you're missing out. One shot "
-        "might miss, but out of 10 shots, a few will definitely hit.\n\n"
+        "customer, lawyer, electrician, contractor, or investor, you're missing out. One shot \n\n"
         
         "Find the best fit for your task or simply pose a question to multiple people and "
         "compare their answers or quotes with our tool.\n\n"
@@ -25,5 +24,5 @@ def home_page():
         "Save your time; let the code handle the manual work for you!"
     )
     
-    if st.button("Go to Use Page"):
+    if st.button("Try for Free"):
         st.session_state.page = 'use'
