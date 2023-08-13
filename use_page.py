@@ -105,7 +105,7 @@ def use_page():
     max_emails = st.number_input("Maximum number of emails to extract from each URL:", min_value=1, max_value=100, step=1, value=2, key=max_emails_key)
 
     # Replace the markdown link with a button
-    if st.button('Terms of Use', key='terms_of_use_button'):
+    if st.button('Please review Terms of Use', key='terms_of_use_button'):
         st.session_state.page = 'terms'
 
     # Add a checkbox for accepting the terms of use
